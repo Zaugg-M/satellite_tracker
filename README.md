@@ -1,41 +1,32 @@
-# Satellite Tracker Web App
+# Overview
 
-### Description
+I wanted to grow my understanding of modern JavaScript by building a real-time satellite tracker. This project leverages core language features—such as ES6 array methods, asynchronous functions, and structured error handling—while integrating external APIs and libraries to deliver an interactive geospatial visualization.
 
-A browser-based satellite tracker that fetches real-time orbital data from a public API, computes positions using the satellite.js library, and displays satellites on an interactive Leaflet map. Users can select satellites from a list, view their current latitude/longitude, and see when they will next pass overhead.
+This is a web application fetches live Two-Line Element (TLE) data, computes orbital positions using the satellite.js library, and renders satellite ground-tracks and current locations on a Leaflet map directly in the browser.
 
-### Features (Unique Requirements)
+My goal in writing this software was to apply advanced JavaScript syntax and asynchronous programming patterns in a practical context, reinforcing my learning through a hands-on project.
 
-* Display output to the screen via DOM updates and the Leaflet map.
-* Use native ES6 array functions to process satellite lists.
-* Recursively update satellite positions at a fixed interval.
-* Integrate two external libraries via CDN: satellite.js and Leaflet.
+[Software Demo Video](https://youtu.be/FeVPtO48guk)
 
-### Stretch Challenge
+# Development Environment
 
-* Demonstrate throwing and handling exceptions when API calls fail.
+I used Visual Studio Code as my primary editor and relied on the browser’s developer tools for real-time debugging and network inspection. No build tools or bundlers were required—everything runs client-side.
 
-### File Structure
+* **Language:** JavaScript (ES6+)
+* **Libraries:**
+  * [satellite.js](https://github.com/shashwatak/satellite-js) (via CDN)
+  * [Leaflet](https://leafletjs.com/) (via CDN)
 
-```
-satellite-tracker/
-├── index.html
-├── script.js
-└── README.md
-```
+# Useful Websites
 
-### Installation & Setup
+* [MDN Web Docs: JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [Leaflet Documentation]()
+* [satellite.js GitHub](https://github.com/shashwatak/satellite-js)
+* [CelesTrak TLE Data](https://celestrak.org/)
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/USERNAME/satellite-tracker.git
-   cd satellite-tracker
-   ```
-2. No build step needed—just open index.html in a modern browser.
+# Future Work
 
-### Usage
-
-* Open index.html in your browser.
-* The map loads and the satellite list populates.
-* Click a satellite name to center the map and display its orbit data.
-* Positions auto-update every 5 seconds.
+* Allow users to search and add custom satellites by NORAD ID.
+* Optimize performance by caching computed orbit paths and reducing redraw frequency.
+* Enhance mobile responsiveness and improve touch interactions.
+* Add UI controls for selecting map styles and projection options.
